@@ -5,9 +5,9 @@
 </div>
 
 <div class="container" *ngIf="authService.isLoggedIn$ | async">
-  
+
   <header class="header">
-    
+
     <h1>{{ title }}</h1>
 
     <nav *ngIf="authService.role$ | async as role">
@@ -23,7 +23,7 @@
         <a routerLink="/historial" routerLinkActive="activo">Mi Historial</a>
       </ng-container>
       <a (click)="logout()">Cerrar Sesión</a>
-    </nav>     
+    </nav>
 
     <div class="user-info-widget" *ngIf="authService.currentUser$ | async as user">
       <span class="user-name">{{ user.nombre }}</span>

@@ -1,47 +1,42 @@
-/* --- Importación de fuentes (Opcional, pero recomendado) --- */
-/* Añade esto al inicio de tu CSS o en el <head> de tu HTML */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Noto+Sans:wght@400;500&display=swap');
+/* --- CAMBIO: Importación de fuentes (Clásicas y Elegantes) --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans:wght@400;500&display=swap');
 
-/* --- Estilo Base (Contenedor) --- */
+/* --- CAMBIO: Estilo Base (El "Escritorio" de Madera) --- */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  /* CAMBIO: Fondo con textura sutil o color crema */
-  background-color: #f4f1ea; /* Un beige muy claro, como papel viejo */
-  /* Opcional: para un fondo de biblioteca desenfocado */
-  /*
-  background-image: url('https://www.shutterstock.com/es/search/blurred-library');
-  background-size: cover;
-  background-position: center;
-  */
+  /* Fondo de madera oscura (nogal/caoba) */
+  /* Usamos un gradiente sutil para simular madera pulida */
+  background: linear-gradient(to bottom, #4e342e, #3e2723);
 }
 
-/* --- Tarjeta de Login (El "Papel") --- */
+/* --- CAMBIO: Tarjeta de Login (El "Pergamino") --- */
 .login-card {
-  background-color: #ffffff;
-  color: #333;
+  /* Fondo de color pergamino o papel antiguo */
+  background-color: #fdfbf5;
+  color: #3a2e28; /* Color de texto (marrón muy oscuro) */
   padding: 40px;
-  border-radius: 8px; /* Ligeramente más "recto" */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  border-radius: 6px; /* Bordes de papel, ligeramente nítidos */
+  /* Sombra más pronunciada para que "flote" sobre la madera */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 400px;
   text-align: center;
-  /* CAMBIO: Borde superior de acento */
-  border-top: 6px solid #004d40; /* Verde biblioteca profundo */
-  /* CAMBIO: Fuente base más limpia */
-  font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  /* CAMBIO: Borde superior con el nuevo acento borgoña */
+  border-top: 6px solid #800000; /* Color Borgoña / Vino tinto */
 }
 
-/* --- Título (Estilo "Libro") --- */
+/* --- CAMBIO: Título (Estilo "Libro Antiguo") --- */
 .login-card h2 {
   margin-bottom: 30px;
-  /* CAMBIO: Fuente Serif para un toque clásico */
-  font-family: 'Merriweather', 'Georgia', serif;
+  /* Fuente Serif muy elegante, como de portada de libro */
+  font-family: 'Playfair Display', 'Georgia', serif;
   font-weight: 700;
-  color: #004d40; /* Verde biblioteca profundo */
+  font-size: 2.1em;
+  color: #3a2e28; /* Marrón oscuro */
 }
 
 /* --- Grupo de Formulario --- */
@@ -53,55 +48,60 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 500; /* Un poco más de peso */
-  color: #444; /* Ligeramente más oscuro */
+  font-weight: 500;
+  color: #5d4037; /* Marrón medio */
+  font-size: 0.9em;
 }
 
-/* --- Campos de Input --- */
+/* --- CAMBIO: Campos de Input (Estilo Clásico) --- */
 .form-group input {
   width: 100%;
-  padding: 12px 15px; /* Un poco más de padding lateral */
-  border: 1px solid #ccc;
-  border-radius: 6px; /* Coincide con el botón */
+  padding: 12px 15px;
+  /* Borde más sutil, color sepia */
+  border: 1px solid #bcaaa4;
+  background-color: #ffffff; /* Fondo blanco limpio para escribir */
+  color: #3a2e28; /* Texto marrón oscuro */
+  border-radius: 6px;
   font-size: 16px;
   font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* CAMBIO: Color de foco (de naranja a verde) */
+/* CAMBIO: Color de foco (al acento borgoña) */
 .form-group input:focus {
   outline: none;
-  border-color: #004d40; /* Verde biblioteca profundo */
-  box-shadow: 0 0 8px rgba(0, 77, 64, 0.25); /* Sombra de foco sutil */
+  border-color: #800000; /* Borgoña */
+  /* Sombra sutil con el color de acento */
+  box-shadow: 0 0 8px rgba(128, 0, 0, 0.3);
 }
 
-/* --- Botón de Login (Color principal) --- */
+/* --- CAMBIO: Botón de Login (Color de acento) --- */
 .login-button {
   width: 100%;
   padding: 15px;
   border: none;
   border-radius: 6px;
-  /* CAMBIO: Color de fondo (de negro a verde) */
-  background-color: #004d40; /* Verde biblioteca profundo */
+  /* Color de fondo (acento borgoña) */
+  background-color: #800000;
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 600;
   font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
-  letter-spacing: 0.5px; /* Ligero espaciado */
+  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
 /* CAMBIO: Hover del botón */
 .login-button:hover {
-  background-color: #00695c; /* Un verde ligeramente más claro */
+  background-color: #660000; /* Borgoña más oscuro */
   transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Mensaje de Error --- */
 .error-message {
-  color: #D32F2F; /* El rojo para errores se mantiene (es universal) */
+  color: #c62828; /* Un rojo claro que funciona sobre el pergamino */
   margin-top: 15px;
   min-height: 20px;
   font-weight: 500;
