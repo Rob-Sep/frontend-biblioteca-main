@@ -1,0 +1,108 @@
+/* --- Importación de fuentes (Opcional, pero recomendado) --- */
+/* Añade esto al inicio de tu CSS o en el <head> de tu HTML */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Noto+Sans:wght@400;500&display=swap');
+
+/* --- Estilo Base (Contenedor) --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  /* CAMBIO: Fondo con textura sutil o color crema */
+  background-color: #f4f1ea; /* Un beige muy claro, como papel viejo */
+  /* Opcional: para un fondo de biblioteca desenfocado */
+  /*
+  background-image: url('https://www.shutterstock.com/es/search/blurred-library');
+  background-size: cover;
+  background-position: center;
+  */
+}
+
+/* --- Tarjeta de Login (El "Papel") --- */
+.login-card {
+  background-color: #ffffff;
+  color: #333;
+  padding: 40px;
+  border-radius: 8px; /* Ligeramente más "recto" */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  /* CAMBIO: Borde superior de acento */
+  border-top: 6px solid #004d40; /* Verde biblioteca profundo */
+  /* CAMBIO: Fuente base más limpia */
+  font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Título (Estilo "Libro") --- */
+.login-card h2 {
+  margin-bottom: 30px;
+  /* CAMBIO: Fuente Serif para un toque clásico */
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 700;
+  color: #004d40; /* Verde biblioteca profundo */
+}
+
+/* --- Grupo de Formulario --- */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500; /* Un poco más de peso */
+  color: #444; /* Ligeramente más oscuro */
+}
+
+/* --- Campos de Input --- */
+.form-group input {
+  width: 100%;
+  padding: 12px 15px; /* Un poco más de padding lateral */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Coincide con el botón */
+  font-size: 16px;
+  font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* CAMBIO: Color de foco (de naranja a verde) */
+.form-group input:focus {
+  outline: none;
+  border-color: #004d40; /* Verde biblioteca profundo */
+  box-shadow: 0 0 8px rgba(0, 77, 64, 0.25); /* Sombra de foco sutil */
+}
+
+/* --- Botón de Login (Color principal) --- */
+.login-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  /* CAMBIO: Color de fondo (de negro a verde) */
+  background-color: #004d40; /* Verde biblioteca profundo */
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.5px; /* Ligero espaciado */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* CAMBIO: Hover del botón */
+.login-button:hover {
+  background-color: #00695c; /* Un verde ligeramente más claro */
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Mensaje de Error --- */
+.error-message {
+  color: #D32F2F; /* El rojo para errores se mantiene (es universal) */
+  margin-top: 15px;
+  min-height: 20px;
+  font-weight: 500;
+}
