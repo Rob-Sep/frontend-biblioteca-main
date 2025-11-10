@@ -19,7 +19,7 @@ interface JwtPayload {
 })
 
 export class AuthService {
-  private apiUrl = 'https://backend-biblioteca-u4k0.onrender.com/api/auth';
+  private apiUrl = 'https://backend-biblioteca-main.onrender.com/api/auth';
 
   private loggedIn = new BehaviorSubject<boolean>(this.hasToken());
   private userRole = new BehaviorSubject<'Admin' | 'Usuario' | null>(null);
